@@ -16,7 +16,7 @@ public class SimpleDedemanSeleniumTest {
     //depending on the OS and browser version you are using we set this property
     //read more - https://www.selenium.dev/documentation/en/webdriver/driver_requirements/
     System.setProperty("webdriver.chrome.driver",
-        "C:\\!dev_projects\\sda\\grupa16\\selenium\\src\\test\\resources\\webdriver\\windows\\chromedriver.exe");
+        "src/test/resources/webdriver/windows/chromedriver.exe");
     //initialize the driver as ChromeDriver
     WebDriver driver = new ChromeDriver();
     //maximize the browser window

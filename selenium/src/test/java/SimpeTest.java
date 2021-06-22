@@ -9,7 +9,7 @@ public class SimpeTest {
   @Test
   public void test() {
     System.setProperty("webdriver.chrome.driver",
-        "C:\\!dev_projects\\sda\\grupa16\\selenium\\src\\test\\resources\\webdriver\\windows\\chromedriver.exe");
+        "src/test/resources/webdriver/windows/chromedriver.exe");
 
     WebDriver driver = new ChromeDriver();
 
