@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -29,10 +30,10 @@ public class DedemanSeleniumTests {
     driver.get("https://www.dedeman.ro/");
   }
 
-//  @AfterEach
-//  public void tearDown() {
-//    driver.quit();
-//  }
+  @AfterEach
+  public void tearDown() {
+    driver.quit();
+  }
 
 
   @Test
@@ -164,17 +165,19 @@ public class DedemanSeleniumTests {
     inputLocalitateElement.sendKeys("Albesti");
     inputJudetElement.sendKeys(Keys.RETURN);
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    WebElement buttonCloseShoppingModal = driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div[3]/div/div[1]/div/i"));
+    WebElement buttonCloseShoppingModal = driver
+        .findElement(By.xpath("//*[@id=\"app\"]/div[2]/div[3]/div/div[1]/div/i"));
     buttonCloseShoppingModal.click();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-
     //navigate to basket
-    WebElement buttonShoppingBasket = driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div[1]/div/div[2]/div[2]/div[2]/ul/li[3]/a"));
+    WebElement buttonShoppingBasket = driver.findElement(
+        By.xpath("//*[@id=\"app\"]/div[2]/div[1]/div/div[2]/div[2]/div[2]/ul/li[3]/a"));
     buttonShoppingBasket.click();
 
     //verify that at least 1 product exists in the shopping basket
-    WebElement labelShoppingBasketNumberOfItems = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div[2]/div[1]/div/div[1]/div/p[1]"));
+    WebElement labelShoppingBasketNumberOfItems = driver
+        .findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div[2]/div[1]/div/div[1]/div/p[1]"));
     String textLabelShoppingBasketItems = labelShoppingBasketNumberOfItems.getText();
 
     boolean isAtLeastOneProductInBasket = textLabelShoppingBasketItems.contains("1");
