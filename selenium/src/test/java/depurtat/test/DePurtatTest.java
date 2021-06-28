@@ -8,7 +8,6 @@ import depurtat.page.LoginPage;
 import depurtat.page.MainPage;
 import depurtat.page.NoutatiPage;
 import depurtat.util.NavigationUtils;
-import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
@@ -67,8 +66,19 @@ public class DePurtatTest {
     assertTrue(accountPage.verifyThatUserHasLoggedIn());
   }
 
+
   @Test
   @Order(3)
+  public void verifyThatLoggedInUserCanLogoutFromHisAccount() {
+    navigation.navigateToLoginPage();
+    loginPage.inputUserNameAndPassword(username, password);
+    loginPage.clickOnAccessAccountButton();
+    accountPage.logOut();
+    assertTrue(mainPage.checkElementsOnTheMainPage());
+  }
+
+  @Test
+  @Order(4)
   public void verifyThatUserIsAbleToAddMultipleProductsToHisFavouriteList() {
     navigation.navigateToNoutatiPage();
 
@@ -82,9 +92,8 @@ public class DePurtatTest {
   }
 
   @Test
-  @Order(4)
+  @Order(5)
   public void testul1() {
     assertEquals(2, 2);
   }
-
 }
