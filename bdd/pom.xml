@@ -14,31 +14,7 @@
   <properties>
     <maven.compiler.source>15</maven.compiler.source>
     <maven.compiler.target>15</maven.compiler.target>
-    <cucumber.version>6.9.1</cucumber.version>
   </properties>
 
-  <dependencies>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>${cucumber.version}</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>${cucumber.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-core</artifactId>
-      <version>${cucumber.version}</version>
-    </dependency>
-
-  </dependencies>
 
 </project>
