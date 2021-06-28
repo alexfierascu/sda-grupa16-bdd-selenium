@@ -8,6 +8,7 @@ import depurtat.page.LoginPage;
 import depurtat.page.MainPage;
 import depurtat.page.NoutatiPage;
 import depurtat.util.NavigationUtils;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;

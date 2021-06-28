@@ -73,7 +73,7 @@ public class DedemanSeleniumTests {
         .findElement(By.xpath("//*[@id=\"app\"]/div/div[2]/div[3]/div/div/div[2]/div/input"));
     inputLocalitateElement.click();
     inputLocalitateElement.sendKeys("Albesti");
-    inputJudetElement.sendKeys(Keys.RETURN);
+    inputLocalitateElement.sendKeys(Keys.RETURN);
 
     //wait implicit
     //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
